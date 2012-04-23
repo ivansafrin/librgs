@@ -1,0 +1,6 @@
+Build
+release
+*.o
+*.swp
+*.swo
+.DS_Store

@@ -99,6 +99,7 @@ int RGS_Init(int width, int height, int screenWidth, int screenHeight, int scree
 			
 			g_rgs->ntsc = (snes_ntsc_t*) malloc( sizeof (snes_ntsc_t) );
 			snes_ntsc_setup_t setup = snes_ntsc_composite;
+			memset((void*)&setup, 0, sizeof(snes_ntsc_composite));
 			setup.sharpness = 0.7;
 //			setup.saturation = 0.1;
 //			setup.contrast = 0.2;

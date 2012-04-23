@@ -334,7 +334,7 @@ void RGS_LoadSurfacePalette(RGS_Surface *surface, char *palette) {
 	Uint32 riffType = 0;
 		
 	if(!pFile) {
-		return false;
+		return;
 	}
 		
 	fread(&sig, sizeof(Uint32), 1, pFile);

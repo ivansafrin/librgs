@@ -2,11 +2,7 @@
 #include <rgs.h> 
 #include "SDL.h"
 
-#ifdef _WINDOWS
-	#define CONTENT_PATH "data/"
-#else
-	#define CONTENT_PATH "tpp.app/Contents/Resources/"
-#endif
+#define CONTENT_PATH "data/"
 
 #define ENTITY_PLAYER_START	1
 #define ENTITY_DEALER		2

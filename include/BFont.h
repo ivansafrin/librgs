@@ -13,7 +13,7 @@
 #define __BFONT_H_
 
 
-#include "SDL.h"
+#include <SDL.h>
 
 #ifdef __cplusplus
 extern "C" {
