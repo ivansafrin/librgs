@@ -1,0 +1,9 @@
+Disable expansion sound channels when PAL emulation is active.
+
+Fix volume levels of expansion sound chips, and see if their DACs exhibit
+any non-linearity.  Also implement a global volume-lowering effect for
+all expansion sound chips(they have a resistor across the audio in and audio 
+out)...
+
+Modularize the sound code, especially the expansion sound chips, to allow for multiple
+Festalon "objects", and to also allow for multiple expansion sound chips per NSF.

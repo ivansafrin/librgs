@@ -1,0 +1,16 @@
+CC	= gcc 
+TFLAGS  = -mcpu=i686 -DC80x86 -O2 -fomit-frame-pointer
+RM	= rm
+B	= drivers/
+
+all:		fest
+		mv festalon.exe in_festalon.dll
+OBJDRIVER	= ${B}winamp.o ${B}win.o
+LDRIVER		= -lm -shared
+
+${B}win.o:		${B}win.res
+			windres -o ${B}win.o ${B}win.res
+
+include Makefile.base
+
+include Makefile.common

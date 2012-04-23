@@ -1,0 +1,19 @@
+The following makefiles are provided.  You should use gnu make and gcc.
+If you are compiling on a non IA32/80x86 architecture, you
+must edit the TFLAGS line in the appropriate makefile.  Also, you should 
+probably change the "-mcpu=i686" argument to something else if you're using
+an AMD processor.
+
+
+Makefile.dos	MS/PC/DR-DOS with a Sound	Console interface.
+		Blaster or compatible(or
+		emulator).
+
+Makefile.unix	Linux/FreeBSD/any "UNIX"	Console interface.
+		with OSS compatible /dev/dsp.
+
+Makefile.xmms	Any(?) "UNIX" with an xmms	XMMS interface(input plugin).
+		port.
+
+Makefile.winamp	MS Windows			Winamp 2 interface
+						 (input plugin).

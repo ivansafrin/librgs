@@ -1,0 +1,22 @@
+CFLAGS  = -Wall -Winline ${TFLAGS}
+OBJECTS = x6502.o sound.o nsf.o cart.o filter.o
+
+fest: 		fest2
+include Makefile.common
+include	ext/Makefile
+fest2:	        ${OBJECTS} ${EXTOBJS} ${OBJDRIVER}
+		${CC} -o festalon ${OBJECTS} ${EXTOBJS} ${OBJDRIVER} ${LDRIVER}
+
+clean:
+		${RM} festalon
+		${RM} ${OBJECTS} 
+		${RM} ${EXTOBJS} 
+		${RM} ${OBJDRIVER}
+
+nsf.o:		nsf.c nsf.h x6502.h sound.h
+x6502.o:	x6502.c x6502.h ops.h sound.h
+sound.o:	sound.c sound.h types.h x6502.h
+
+cart.o:		cart.c cart.h types.h
+
+filter.o:	filter.c filter.h sound.h

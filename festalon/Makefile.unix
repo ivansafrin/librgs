@@ -1,0 +1,14 @@
+CC	= gcc 
+TFLAGS  = -mcpu=i686 -DC80x86 -O2 -fomit-frame-pointer
+RM	= rm -f
+B	= drivers/
+
+all:		fest
+
+OBJDRIVER	= ${B}cli.o ${B}unixdsp.o
+LDRIVER		= -lm
+
+include Makefile.base
+
+${B}cli.o:	${B}cli.c
+include Makefile.common

@@ -1,0 +1,14 @@
+CC	= gcc 
+TFLAGS  = -mcpu=i686 -DC80x86 -O2 -fomit-frame-pointer -D_REENTRANT `gtk-config --cflags`
+RM	= rm -f
+B	= drivers/
+
+all:		fest
+		mv -f festalon ${HOME}/.xmms/Plugins/libfestalon.so
+
+OBJDRIVER	= ${B}xmms.o
+LDRIVER		= -lm -shared
+
+include Makefile.base
+
+include Makefile.common
